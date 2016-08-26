@@ -6,7 +6,7 @@ import java.util.Set;
 public class DuplicateValueinArray {
 
 	public static void main(String[] args) {
-		String[] sArr = { "JavaScript", "PHP", "Java", "PHP", "DBMS", "PHP", "dbms" };
+		String[] sArr = { "JavaScript", "PHP", "Java", "PHP", "DBMS", "DBMS", "dbms" };
 		Set<String> dSet = duplicate(sArr);
 		System.out.println(dSet);
 	}

@@ -6,12 +6,18 @@ public class PalindromeNumber {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.println("enter a num");	
+		try{
+		System.out.println("enter a number:");	
 		int pNum = s.nextInt();
-		palindrom(pNum);
+		String res = palindrom(pNum);
+		System.out.println(res);
+		}
+		catch (Exception e) {
+			System.out.println("Not a valid input.");
+		}
 	}
 	
-	public static void palindrom(int num) {
+	public static String palindrom(int num) {
 		int temp = num;
 		int remainder;
 		int reverse =0;
@@ -23,10 +29,12 @@ public class PalindromeNumber {
 		}
 		
 		if (reverse == temp) {
-			System.out.println(temp+" is a Palindrome Number!"); 
+			//System.out.println(temp+" is a Palindrome Number!"); 
+			return temp + " is a Palindrome Number!";
 		}
 		else {
-			System.out.println(temp+" is not a Palindrome Number!");
+			//System.out.println(temp+" is not a Palindrome Number!");
+			return temp + " is not a Palindrome Number!";
 		}	
 	}
 }
