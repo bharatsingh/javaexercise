@@ -6,10 +6,11 @@ import java.util.Map;
 public class DuplicateCharacterInString {
 	public static void main(String[] args) {
 		String s = "aaabcd";
-		duplicate(s);
+		Map<Character, Integer> res = duplicate(s);
+		System.out.println(res);
 	}
 
-	public static void duplicate(String s) {
+	public static Map<Character, Integer> duplicate(String s) {
 		Map<Character, Integer> charOccurrence = new HashMap<Character, Integer>();
 		char[] sChar = s.toCharArray();
 
@@ -20,13 +21,6 @@ public class DuplicateCharacterInString {
 				charOccurrence.put(cell, 1);
 			}
 		}
-
-		for (Map.Entry<Character, Integer> entry : charOccurrence.entrySet()) {
-			if (entry.getValue() > 1) {
-				System.out.println(entry);
-			}
-
-		}
+		return charOccurrence;
 	}
-
 }
